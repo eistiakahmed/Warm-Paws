@@ -124,10 +124,6 @@ npm run dev
 
 ## Eistiak Ahmed
 
----
-
-### 🔗 Connect with me!
-
 * **LinkedIn:** [https://www.linkedin.com/in/eistiak-ahmed-meraj](https://www.linkedin.com/in/eistiak-ahmed-meraj)
 * **Email:** [eistiakahmedmeraj@gmail.com](mailto:eistiakahmedmeraj@gmail.com)
 
