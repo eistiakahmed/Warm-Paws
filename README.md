@@ -11,7 +11,6 @@ Keep your furry friends warm, cozy, and healthy this winter with **Warm Paws** â
 - [Key Features](#key-features)  
 - [Tech Stack](#tech-stack)  
 - [Installation](#installation)  
-- [Screenshots](#screenshots)  
 - [Contact](#contact)  
 
 ---
