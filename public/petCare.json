@@ -1,0 +1,122 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Keep your furry friend cozy and stylish this winter with our Winter Coat Fitting service. At PawCare Studio, we provide custom coat fittings tailored to your dog's size and breed. Our warm and comfortable winter outfits are designed to protect your dog from cold weather, snow, and wind while allowing freedom of movement. Choose from a variety of materials, colors, and designs to ensure both warmth and fashion. Our experienced staff ensures perfect fitting, making winter walks and outdoor playtime safe and enjoyable for your pet.",
+    "image": "https://i.ibb.co/PvRSp73D/Winter-Coat-Fitting-for-Dogs.jpg",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Cozy Sweater Tailoring",
+    "providerName": "WarmTail Designs",
+    "providerEmail": "contact@warmtail.com",
+    "price": 20,
+    "rating": 4.8,
+    "slotsAvailable": 6,
+    "description": "Our Cozy Sweater Tailoring service provides handmade, tailor-fit sweaters for pets of all sizes. Each sweater is crafted with soft, warm materials that keep your pet comfortable during chilly winter months. Our expert tailors ensure the perfect fit, providing freedom of movement and style. With a wide selection of colors and patterns, your pet will look adorable while staying warm and protected from cold weather. Perfect for indoor lounging or outdoor walks during winter.",
+    "image": "https://i.ibb.co/hJYcL7JY/Cozy-Sweater-Tailoring.jpg",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Thermal Blanket Service",
+    "providerName": "SnugglePets",
+    "providerEmail": "hello@snugglepets.com",
+    "price": 18,
+    "rating": 4.7,
+    "slotsAvailable": 5,
+    "description": "Snuggle your pet in warmth with our Thermal Blanket Service. We provide specially designed heat-retaining blankets suitable for small to medium pets. These blankets keep pets cozy during winter nights and chilly days, offering a sense of security and comfort. Made from high-quality materials, they are soft, durable, and easy to clean. Ideal for indoor use, car rides, or travel, these blankets help maintain your pet’s body temperature, reducing the risk of cold-related illnesses.",
+    "image": "https://i.ibb.co/mVmzNwWW/Thermal-Blanket-Service.jpg",
+    "category": "Comfort"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Thermal Spa & Grooming",
+    "providerName": "PetGlow Spa",
+    "providerEmail": "care@petglowspa.com",
+    "price": 35,
+    "rating": 5.0,
+    "slotsAvailable": 3,
+    "description": "Treat your pet to a luxurious grooming experience with our Thermal Spa & Grooming service. Our warm water baths, gentle shampoos, and professional fur care treatments keep your pet’s coat clean, shiny, and soft during the winter season. We also provide drying, brushing, and optional massage to improve circulation and comfort. Our trained staff ensures a calm and stress-free environment, making grooming a relaxing experience for your pet while protecting them from the harsh winter chill.",
+    "image": "https://i.ibb.co/q3PTzkgm/Thermal-Spa-Grooming.webp",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Paw Protection Wax Treatment",
+    "providerName": "SafePaws Clinic",
+    "providerEmail": "info@safepaws.com",
+    "price": 15,
+    "rating": 4.9,
+    "slotsAvailable": 8,
+    "description": "Protect your pet’s paws from harsh winter conditions with our Paw Protection Wax Treatment. This treatment uses organic, non-toxic wax to prevent cracks, dryness, and irritation caused by snow, ice, and salt. Regular application helps maintain paw health and comfort while allowing pets to enjoy outdoor activities safely. Our specialists provide gentle application and advice on maintaining paw care at home, ensuring your pet’s feet stay soft, healthy, and protected all winter long.",
+    "image": "https://i.ibb.co/4nrwZsJB/Paw-Protection-Wax-Treatment.jpg",
+    "category": "Health"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Winter Health Checkup",
+    "providerName": "VetCare BD",
+    "providerEmail": "support@vetcarebd.com",
+    "price": 40,
+    "rating": 4.8,
+    "slotsAvailable": 5,
+    "description": "Ensure your pet stays healthy during the cold months with our Winter Health Checkup. This comprehensive checkup focuses on immunity, coat condition, joint health, and overall wellness. Our experienced veterinarians provide preventive care advice, vaccinations, and tips for winter nutrition. Regular checkups help detect early signs of winter-related illnesses and keep your pet active, happy, and comfortable even in chilly weather.",
+    "image": "https://i.ibb.co/nsB33TpT/Winter-Health-Checkup.webp",
+    "category": "Health"
+  },
+  {
+    "serviceId": 7,
+    "serviceName": "Immunity Booster Diet Plan",
+    "providerName": "NutriPaws",
+    "providerEmail": "contact@nutripaws.com",
+    "price": 22,
+    "rating": 4.7,
+    "slotsAvailable": 6,
+    "description": "Boost your pet’s immunity during winter with our customized diet plans. NutriPaws provides nutrition programs tailored to your pet’s age, breed, and health needs. Special emphasis is given to vitamins, minerals, and proteins that enhance immunity and energy levels. With our diet plans, your pet stays healthy, active, and strong, reducing the risk of winter infections and keeping them lively throughout the season.",
+    "image": "https://i.ibb.co/LXSsGd6K/Immunity-Booster-Diet-Plan.webp",
+    "category": "Wellness"
+  },
+  {
+    "serviceId": 8,
+    "serviceName": "Pet Sauna Therapy",
+    "providerName": "WarmNest Spa",
+    "providerEmail": "relax@warmnest.com",
+    "price": 45,
+    "rating": 5.0,
+    "slotsAvailable": 2,
+    "description": "Relax and rejuvenate your pet with our Pet Sauna Therapy. This gentle heat therapy improves blood circulation, relaxes stiff muscles, and provides overall warmth during cold months. Our trained staff ensures a safe and comfortable sauna experience, reducing stress and promoting wellness. Ideal for older pets or those with joint problems, this therapy keeps your pet feeling active, comfortable, and happy all winter long.",
+    "image": "https://i.ibb.co/RTRWCN5n/Pet-Sauna-Therapy.webp",
+    "category": "Wellness"
+  },
+  {
+    "serviceId": 9,
+    "serviceName": "Winter Walking Assistance",
+    "providerName": "WalkiePaws",
+    "providerEmail": "team@walkiepaws.com",
+    "price": 28,
+    "rating": 4.6,
+    "slotsAvailable": 7,
+    "description": "Ensure safe and enjoyable outdoor walks for your pets during winter with our Winter Walking Assistance service. Our professional walkers are trained to navigate icy and snowy routes while keeping pets comfortable and secure. They monitor paw health, energy levels, and weather conditions to prevent cold-related issues. Perfect for active pets, this service allows your furry friend to stay fit, socialized, and happy even during harsh winter days.",
+    "image": "https://i.ibb.co/qF44JZLZ/Winter-Walking-Assistance.jpg",
+    "category": "Outdoor"
+  },
+  {
+    "serviceId": 10,
+    "serviceName": "Snow Boot Fitting",
+    "providerName": "PawShield",
+    "providerEmail": "sales@pawshield.com",
+    "price": 19,
+    "rating": 4.8,
+    "slotsAvailable": 9,
+    "description": "Protect your pet’s paws from snow, ice, and cold ground with our Snow Boot Fitting service. PawShield offers high-quality, waterproof boots measured and fitted to your pet’s exact paw size for comfort and protection. Ideal for winter walks and outdoor adventures, our boots prevent injuries, cracking, and frostbite, allowing your pets to enjoy snow safely while staying warm and comfortable.",
+    "image": "https://i.ibb.co/r9qzh9T/Snow-Boot-Fitting.webp",
+    "category": "Clothing"
+  }
+]
