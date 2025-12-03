@@ -8,6 +8,9 @@ import ServiceDetails from '../Pages/Service Details/ServiceDetails';
 import MyProfile from '../Pages/My Profile/MyProfile';
 import PrivateRoutes from '../Private Routes/PrivateRoutes';
 import ForgetPassword from '../Pages/ForgetPassword/ForgetPassword';
+import AboutUs from '../Pages/AboutUs/AboutUs';
+import Contact from '../Pages/Contact/Contact';
+import Support from '../Pages/Support/Support';
 
 export const router = createBrowserRouter([
   {
@@ -24,11 +27,19 @@ export const router = createBrowserRouter([
       },
       {
         path: '/services/:id',
-        element: (
-          <PrivateRoutes>
-            <ServiceDetails></ServiceDetails>
-          </PrivateRoutes>
-        ),
+        element: <ServiceDetails></ServiceDetails>,
+      },
+      {
+        path: '/aboutUs',
+        element: <AboutUs />,
+      },
+      {
+        path: '/contact',
+        element: <Contact />,
+      },
+      {
+        path: '/support',
+        element: <Support />,
       },
       {
         path: '/login',
@@ -48,7 +59,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/forget-password',
-        Component: ForgetPassword
+        Component: ForgetPassword,
       },
     ],
   },

@@ -9,11 +9,11 @@ const AllService = ({ pet }) => {
       className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
       data-aos="fade-up"
     >
-      <div className="h-[220px] w-full overflow-hidden p-5 transition-transform duration-500 hover:scale-110">
+      <div className="h-[220px] w-full overflow-hidden transition-transform duration-500 hover:scale-110">
         <img
           src={image}
           alt={serviceName}
-          className="h-[300px] w-full transition-transform duration-500 hover:scale-110 rounded-3xl"
+          className="h-[300px] w-full transition-transform duration-500 hover:scale-110 rounded-xl object-cover"
         />
       </div>
 

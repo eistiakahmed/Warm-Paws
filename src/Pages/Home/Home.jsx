@@ -9,10 +9,11 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Banner from '../../Components/Banner/Banner';
+import PricingCard from '../../Components/PricingCard/PricingCard';
 
 const Home = () => {
   const { petCare } = usePetCare();
-  const popularService = petCare.slice(0, 3);
+  const popularService = petCare.slice(0, 4);
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -97,10 +98,13 @@ const Home = () => {
     },
   ];
 
+ 
+
   return (
-    <div>
+    <div className="w-11/12 mx-auto">
       <Banner />
 
+      {/* Popular Services */}
       <section data-aos="fade-up" className="py-16">
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-transparent bg-clip-text bg-linear-to-r from-blue-500 via-purple-500 to-pink-500">
@@ -112,7 +116,7 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-11/12 mx-auto mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8  mx-auto mt-10">
           {popularService.map((pet) => (
             <AllService key={pet.serviceId} pet={pet} />
           ))}
@@ -123,12 +127,15 @@ const Home = () => {
             to="/service"
             className="bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform duration-300"
           >
-            Explore More Services
+            Explore More
           </Link>
         </div>
       </section>
 
-      <section data-aos="fade-right" className="w-11/12 mx-auto my-16">
+      {/*  */}
+
+      {/* Winter Care Tips */}
+      <section data-aos="fade-right" className=" mx-auto my-16">
         <h1 className="text-center text-4xl md:text-5xl font-extrabold leading-tight text-transparent bg-clip-text bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 mb-10">
           Winter Care Tips for Pets
         </h1>
@@ -137,23 +144,28 @@ const Home = () => {
           {winterCareTips.map((careTips) => (
             <div
               key={careTips.tipId}
-              className="bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300"
+              className="relative bg-white rounded-xl shadow-lg p-6 overflow-hidden transition-transform duration-300 hover:scale-105"
             >
-              <h2 className="text-xl font-semibold text-gray-800 mb-3">
+              {/* Side color bar on hover */}
+              <div className="absolute top-0 left-0 h-full w-1 bg-linear-to-b from-blue-400 via-purple-500 to-pink-500 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-l-xl"></div>
+
+              <h2 className="text-xl font-semibold text-gray-800 mb-3 relative z-10">
                 {careTips.title}
               </h2>
-              <p className="text-gray-600 text-sm mb-4">
+              <p className="text-gray-600 text-sm mb-4 h-[70px] relative z-10">
                 {careTips.description}
               </p>
-              <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+              <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium relative z-10">
                 {careTips.category}
               </span>
             </div>
           ))}
         </div>
       </section>
-
-      <section data-aos="fade-left" className="w-11/12 mx-auto py-16">
+      {/* Card */}
+      <PricingCard />
+      {/* Expert Vets */}
+      <section data-aos="fade-left" className=" mx-auto py-16">
         <h1 className="text-center text-4xl md:text-5xl font-extrabold leading-tight text-transparent bg-clip-text bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 mb-10">
           Meet Our Expert Vets
         </h1>
@@ -168,25 +180,27 @@ const Home = () => {
                 src={vet.image}
                 alt={vet.name}
                 className="rounded-full w-32 h-32 object-cover mb-4"
+                loading="lazy"
               />
-              <h2 className="text-xl font-semibold text-gray-800 mb-1">
+              <h2 className="text-xl font-semibold text-gray-800">
                 {vet.name}
               </h2>
+              <p className=" rounded-full text-sm font-medium  transition">
+                {vet.contactEmail}
+              </p>
               <p className="text-indigo-600 font-medium mb-1">
                 {vet.specialization}
               </p>
               <p className="text-gray-500 text-sm mb-3">
                 {vet.experience} experience
               </p>
-              <p className="text-white bg-blue-500 px-4 py-2 rounded-full text-sm font-medium">
-                {vet.contactEmail}
-              </p>
             </div>
           ))}
         </div>
       </section>
 
-      <section data-aos="fade-up" className="w-11/12 mx-auto py-16">
+      {/* Testimonials */}
+      <section data-aos="fade-up" className=" mx-auto py-16">
         <h1 className="text-center text-4xl md:text-5xl font-extrabold leading-tight text-transparent bg-clip-text bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 mb-10">
           What Our Pet Owners Say
         </h1>
@@ -201,17 +215,20 @@ const Home = () => {
         >
           {testimonials.map((test) => (
             <SwiperSlide key={test.id}>
-              <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+              <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center h-[300px]">
                 <img
                   src={test.image}
                   alt={test.name}
                   className="rounded-full w-24 h-24 object-cover mb-4"
+                  loading="lazy"
                 />
                 <h2 className="text-xl font-semibold text-gray-800 mb-2">
                   {test.name}
                 </h2>
-                <p className="text-indigo-600 font-medium mb-1">
-                  Pet: {test.petName}
+                <p className="text-white font-medium mb-1">
+                  <span className="bg-indigo-600 py-1 px-3 rounded-4xl">
+                    {test.petName}
+                  </span>
                 </p>
                 <p className="text-gray-600 text-sm">{test.feedback}</p>
               </div>

@@ -7,7 +7,7 @@ const MainLayouts = () => {
   return (
     <div>
       <Navbar />
-      <div className='bg-gray-50'>
+      <div className='bg-slate-100'>
         <Outlet />
       </div>
       <Footer />

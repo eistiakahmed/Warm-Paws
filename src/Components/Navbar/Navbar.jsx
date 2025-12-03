@@ -8,15 +8,14 @@ const Navbar = () => {
 
   const handleSignOut = () => {
     logOut()
-      .then(() => {
-        toast.success('Logout Successful');
-      })
+      .then(() => toast.success('Logout Successful'))
       .catch((err) => {
         console.error(err);
         toast.error('Logout Failed');
       });
   };
 
+  // Navigation Links
   const links = (
     <>
       <li className="font-medium">
@@ -24,8 +23,8 @@ const Navbar = () => {
           to="/"
           className={({ isActive }) =>
             isActive
-              ? 'text-blue-600 font-semibold'
-              : 'text-gray-700 hover:text-blue-600 duration-300'
+              ? 'text-blue-600 font-semibold underline'
+              : 'text-gray-800 hover:text-blue-600 duration-300'
           }
         >
           Home
@@ -37,39 +36,77 @@ const Navbar = () => {
           to="/service"
           className={({ isActive }) =>
             isActive
-              ? 'text-blue-600 font-semibold'
-              : 'text-gray-700 hover:text-blue-600 duration-300'
+              ? 'text-blue-600 font-semibold underline'
+              : 'text-gray-800 hover:text-blue-600 duration-300'
           }
         >
-          Service
+          Services
         </NavLink>
       </li>
 
       <li className="font-medium">
         <NavLink
-          to="/myProfile"
+          to="/aboutUs"
           className={({ isActive }) =>
             isActive
-              ? 'text-blue-600 font-semibold'
-              : 'text-gray-700 hover:text-blue-600 duration-300'
+              ? 'text-blue-600 font-semibold underline'
+              : 'text-gray-800 hover:text-blue-600 duration-300'
           }
         >
-          My Profile
+          About Us
         </NavLink>
       </li>
+
+      <li className="font-medium">
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            isActive
+              ? 'text-blue-600 font-semibold underline'
+              : 'text-gray-800 hover:text-blue-600 duration-300'
+          }
+        >
+          Contact
+        </NavLink>
+      </li>
+
+      <li className="font-medium">
+        <NavLink
+          to="/support"
+          className={({ isActive }) =>
+            isActive
+              ? 'text-blue-600 font-semibold underline'
+              : 'text-gray-800 hover:text-blue-600 duration-300'
+          }
+        >
+          Support
+        </NavLink>
+      </li>
+
+      {/* Private Route – only visible after login */}
+      {user && (
+        <li className="font-medium">
+          <NavLink
+            to="/myProfile"
+            className={({ isActive }) =>
+              isActive
+                ? 'text-blue-600 font-semibold underline'
+                : 'text-gray-800 hover:text-blue-600 duration-300'
+            }
+          >
+            My Profile
+          </NavLink>
+        </li>
+      )}
     </>
   );
 
   return (
-    <header className="bg-white shadow-md">
-      <div className="navbar w-11/12 mx-auto flex justify-between items-center py-3">
-        
+    <header className="bg-white shadow-md sticky top-0 z-50">
+      <div className="navbar w-11/12 mx-auto flex justify-between items-center py-3 px-0">
+        {/* Mobile Menu */}
         <div className="dropdown lg:hidden">
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-ghost text-gray-700"
-          >
+          <div tabIndex={0} className="btn btn-ghost text-gray-700">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -85,19 +122,29 @@ const Navbar = () => {
               />
             </svg>
           </div>
-          <ul className="menu menu-sm dropdown-content bg-white rounded-box mt-3 w-52 shadow space-y-2 p-2">
+
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content bg-white rounded-box mt-3 w-56 shadow space-y-2 p-3"
+          >
             {links}
           </ul>
         </div>
+
+        {/* Logo */}
         <Link
           to="/"
-          className="font-bold text-2xl text-transparent bg-clip-text bg-linear-to-r from-blue-500 via-purple-500 to-pink-500"
+          className="font-bold text-3xl text-transparent bg-clip-text bg-linear-to-r from-blue-500 via-purple-500 to-pink-500"
         >
           WarmPaws
         </Link>
+
+        {/* Desktop Menu */}
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal gap-4">{links}</ul>
+          <ul className="menu menu-horizontal">{links}</ul>
         </div>
+
+        {/* User Section */}
         <div className="flex items-center gap-3">
           {user ? (
             <div className="relative group">
@@ -106,17 +153,22 @@ const Navbar = () => {
                   user.photoURL ||
                   'https://i.ibb.co/VcY3rmXz/default-avatar.png'
                 }
+                referrerPolicy="no-referrer"
                 alt="User"
-                className="w-10 h-10 rounded-full border-2 border-blue-500 cursor-pointer"
+                className="w-12 h-12 rounded-full border-2 border-blue-500 cursor-pointer object-cover"
               />
-              <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg p-3 opacity-0 group-hover:opacity-100 transform scale-95 group-hover:scale-100 transition-all duration-300 z-50">
-                <p className="font-semibold text-gray-800 text-center">
+
+              {/* Dropdown */}
+              <div className="absolute right-0 mt-2 w-60 bg-white shadow-lg rounded-lg p-3 opacity-0 group-hover:opacity-100 scale-95 group-hover:scale-100 transition-all duration-300 z-50">
+                <p className="font-semibold text-gray-800">
                   {user.displayName || 'User'}
                 </p>
+                <p className="text-sm text-gray-600">{user.email}</p>
                 <hr className="my-2" />
+
                 <button
                   onClick={handleSignOut}
-                  className="w-full bg-red-500 hover:bg-red-600 text-white py-1.5 rounded-md text-sm font-medium transition-colors"
+                  className="w-full bg-red-500 hover:bg-red-600 text-white py-1.5 rounded-md text-sm font-medium transition"
                 >
                   Logout
                 </button>
@@ -125,7 +177,7 @@ const Navbar = () => {
           ) : (
             <Link
               to="/login"
-              className="bg-red-500 px-6 py-2 text-white rounded-3xl hover:bg-red-600 transition"
+              className="bg-blue-600 px-6 py-2 text-white rounded-3xl hover:bg-blue-700 transition"
             >
               Login
             </Link>
@@ -133,18 +185,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <ToastContainer
-        position="top-right"
-        autoClose={4000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="colored"
-      />
+      <ToastContainer theme="colored" autoClose={3000} />
     </header>
   );
 };

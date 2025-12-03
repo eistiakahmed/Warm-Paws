@@ -29,30 +29,41 @@ const slides = [
 
 const Banner = () => {
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="w-full h-[500px] md:h-[700px] lg:h-[800px]  shadow-xl"
+        className="w-full h-[65vh] md:h-[70vh] lg:h-[75vh]"
       >
         {slides.map((slide, idx) => (
           <SwiperSlide key={idx}>
             <div className="relative w-full h-full overflow-hidden">
+              {/* Image with overlay */}
               <img
                 src={slide.img}
                 alt={slide.title}
-                className="w-full h-full object-cover brightness-90"
+                className="w-full h-full object-cover brightness-75"
               />
-              <div className="absolute left-10 bottom-20 text-white max-w-md">
-                <h2 className="text-4xl font-bold mb-3">{slide.title}</h2>
-                <p className="text-lg">{slide.desc}</p>
+              <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent"></div>
+
+              {/* Text Content */}
+              <div className="absolute left-5 md:left-10 bottom-10 md:bottom-20 max-w-md text-white">
+                <h2 className="text-2xl md:text-4xl font-extrabold mb-3 drop-shadow-lg">
+                  {slide.title}
+                </h2>
+                <p className="text-sm md:text-lg mb-5 drop-shadow-md">
+                  {slide.desc}
+                </p>
+                <a
+                  href="#services"
+                  className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-full transition-transform duration-300 shadow-lg"
+                >
+                  Explore Services
+                </a>
               </div>
             </div>
           </SwiperSlide>
