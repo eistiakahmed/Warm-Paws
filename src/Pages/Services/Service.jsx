@@ -60,7 +60,7 @@ const Services = () => {
   return (
     <section className="w-11/12 mx-auto py-16">
       <h1
-        className="text-center text-4xl md:text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
+        className="text-center text-4xl md:text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-linear-to-r from-blue-500 via-purple-500 to-pink-500"
         data-aos="fade-down"
       >
         All Pet Care Services
@@ -98,7 +98,10 @@ const Services = () => {
         {/* Main Content */}
         <div className="flex-1">
           {/* Sort Dropdown */}
-          <div className="flex justify-end mb-6">
+          <div className="flex justify-between items-center mb-6 bg-white p-4 rounded-2xl">
+            <span className="text-xl font-bold underline">
+              Service available: ({filteredPets.length})
+            </span>
             <select
               value={sortOption}
               onChange={(e) => setSortOption(e.target.value)}
@@ -106,8 +109,6 @@ const Services = () => {
             >
               <option value="price-asc">Price: Low to High</option>
               <option value="price-desc">Price: High to Low</option>
-              <option value="name-asc">Name: A-Z</option>
-              <option value="name-desc">Name: Z-A</option>
             </select>
           </div>
 

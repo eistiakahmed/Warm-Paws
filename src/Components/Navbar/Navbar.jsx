@@ -23,7 +23,7 @@ const Navbar = () => {
           to="/"
           className={({ isActive }) =>
             isActive
-              ? 'text-blue-600 font-semibold underline'
+              ? 'text-blue-600 font-semibold border rounded-4xl border-blue-500'
               : 'text-gray-800 hover:text-blue-600 duration-300'
           }
         >
@@ -36,7 +36,7 @@ const Navbar = () => {
           to="/service"
           className={({ isActive }) =>
             isActive
-              ? 'text-blue-600 font-semibold underline'
+              ? 'text-blue-600 font-semibold border rounded-4xl border-blue-500'
               : 'text-gray-800 hover:text-blue-600 duration-300'
           }
         >
@@ -49,7 +49,7 @@ const Navbar = () => {
           to="/aboutUs"
           className={({ isActive }) =>
             isActive
-              ? 'text-blue-600 font-semibold underline'
+              ? 'text-blue-600 font-semibold border rounded-4xl border-blue-500'
               : 'text-gray-800 hover:text-blue-600 duration-300'
           }
         >
@@ -62,7 +62,7 @@ const Navbar = () => {
           to="/contact"
           className={({ isActive }) =>
             isActive
-              ? 'text-blue-600 font-semibold underline'
+              ? 'text-blue-600 font-semibold border rounded-4xl border-blue-500'
               : 'text-gray-800 hover:text-blue-600 duration-300'
           }
         >
@@ -75,7 +75,7 @@ const Navbar = () => {
           to="/support"
           className={({ isActive }) =>
             isActive
-              ? 'text-blue-600 font-semibold underline'
+              ? 'text-blue-600 font-semibold border rounded-4xl border-blue-500'
               : 'text-gray-800 hover:text-blue-600 duration-300'
           }
         >
@@ -90,7 +90,7 @@ const Navbar = () => {
             to="/myProfile"
             className={({ isActive }) =>
               isActive
-                ? 'text-blue-600 font-semibold underline'
+                ? 'text-blue-600 font-semibold border rounded-4xl border-blue-500'
                 : 'text-gray-800 hover:text-blue-600 duration-300'
             }
           >

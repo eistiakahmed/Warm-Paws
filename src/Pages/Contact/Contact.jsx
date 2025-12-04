@@ -60,7 +60,7 @@ const Contact = () => {
         </div>
 
         {/* CONTACT INFO */}
-        <div className="bg-blue-600 text-white shadow-xl rounded-3xl p-8 flex flex-col justify-center">
+        <div className="bg-blue-600 text-white shadow-xl rounded-3xl p-8 flex flex-col justify-center items-center">
           <h2 className="text-3xl font-bold mb-6">
             Get in Touch <PawPrint className="inline-block ml-2" size={32} />
           </h2>
