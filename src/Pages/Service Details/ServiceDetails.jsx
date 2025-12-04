@@ -177,8 +177,7 @@ const ServiceDetails = () => {
 
             <button
               type="submit"
-              className="md:col-span-2 bg-indigo-600 text-white py-3 rounded-lg 
-      font-semibold hover:bg-indigo-700 duration-200"
+              className="md:col-span-2 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500  text-white py-3 rounded-lg font-semibold  duration-200"
             >
               Confirm Booking
             </button>

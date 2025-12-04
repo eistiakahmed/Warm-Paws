@@ -177,7 +177,7 @@ const Navbar = () => {
           ) : (
             <Link
               to="/login"
-              className="bg-blue-600 px-6 py-2 text-white rounded-3xl hover:bg-blue-700 transition"
+              className="bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 px-6 py-2 text-white rounded-3xl transition"
             >
               Login
             </Link>

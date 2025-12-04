@@ -64,7 +64,7 @@ const AllService = ({ pet }) => {
       <div className="flex items-center justify-between px-5 pb-5 mt-auto">
         <span className="text-2xl font-bold text-gray-800">${price}</span>
         <Link to={`/services/${serviceId}`}>
-          <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-5 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
+          <button className="bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-medium px-5 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
             View Details
           </button>
         </Link>

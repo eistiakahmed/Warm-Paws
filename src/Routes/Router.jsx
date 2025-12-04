@@ -11,6 +11,7 @@ import ForgetPassword from '../Pages/ForgetPassword/ForgetPassword';
 import AboutUs from '../Pages/AboutUs/AboutUs';
 import Contact from '../Pages/Contact/Contact';
 import Support from '../Pages/Support/Support';
+import Error from '../Pages/Error/Error';
 
 export const router = createBrowserRouter([
   {
@@ -63,4 +64,8 @@ export const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: '*',
+    element: <Error />
+  }
 ]);

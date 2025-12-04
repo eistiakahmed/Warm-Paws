@@ -107,8 +107,10 @@ const Login = () => {
         >
           <div className="w-full max-w-sm">
             <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center animate__animated animate__fadeInDown">
-              Login to <span className="text-blue-600">Warm</span>
-              <span className="text-yellow-600">Paws</span>
+              Login to{' '}
+              <span className="leading-tight text-transparent bg-clip-text bg-linear-to-r from-blue-500 via-purple-500 to-pink-500">
+                WarmPaws
+              </span>
             </h2>
 
             <form
@@ -161,7 +163,7 @@ const Login = () => {
 
               <button
                 type="submit"
-                className="btn bg-blue-600 hover:bg-blue-700 text-white w-full font-semibold animate__animated animate__pulse"
+                className="btn text-white bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 w-full font-semibold animate__animated animate__pulse"
               >
                 Login
               </button>

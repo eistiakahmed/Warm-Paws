@@ -99,7 +99,7 @@ const Services = () => {
         <div className="flex-1">
           {/* Sort Dropdown */}
           <div className="flex justify-between items-center mb-6 bg-white p-4 rounded-2xl">
-            <span className="text-xl font-bold underline">
+            <span className="text-xl font-bold">
               Service available: ({filteredPets.length})
             </span>
             <select

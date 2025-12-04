@@ -55,12 +55,12 @@ const Banner = () => {
                 <h2 className="text-2xl md:text-4xl font-extrabold mb-3 drop-shadow-lg">
                   {slide.title}
                 </h2>
-                <p className="text-sm md:text-lg mb-5 drop-shadow-md">
+                <p className="text-sm md:text-lg gtmb-5 drop-shadow-md">
                   {slide.desc}
                 </p>
                 <a
                   href="#services"
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-full transition-transform duration-300 shadow-lg"
+                  className="bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-semibold px-6 py-3 rounded-full transition-transform duration-300 shadow-lg"
                 >
                   Explore Services
                 </a>
